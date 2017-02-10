@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/mordmaman/nodeblog/issues"
   },
-  "homepage": "https://github.com/mordmaman/nodeblog#readme"
+  "homepage": "https://github.com/mordmaman/nodeblog#readme",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "ejs": "^2.5.5",
+    "express": "^4.14.1",
+    "mongoose": "^4.8.1"
+  }
 }
