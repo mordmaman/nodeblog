@@ -3,7 +3,7 @@ var app = express();
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost/yelp_camp");
+mongoose.connect("mongodb://localhost/node_blog");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 
@@ -33,8 +33,15 @@ var Blog = mongoose.model("Blog", blogSchema);
 // )
 
 app.get("/", function(req, res){
-    res.render("index");
+    Blog.find({}, function(err, allBlogs){
+        if(err){
+            console.log(err);
+        } else {
+            res.render("index", {blogs: allBlogs});
+        }
+    })
 })
+
 
 app.get("/blogs/new", function(req, res){
     res.render("new");

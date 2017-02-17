@@ -1,5 +1,11 @@
 <h1>home page</h1>
 
+<div class="row text-center" style-"display:flex; flex-wrap:wrap">
+        <% blogs.forEach(function(blog){ %>
+                         <h4> <li style="list-style:none;"><%= blog.title %></li></h4>
+        <% }); %>
+    </div>
+
 <p>
-                <a class="btn btn-primary btn-large" href="/blogs/new">Add New Campground</a>
+     <a class="btn btn-primary btn-large" href="/blogs/new">Add New Campground</a>
 </p>
