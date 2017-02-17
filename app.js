@@ -19,7 +19,7 @@ var Blog = mongoose.model("Blog", blogSchema);
 // Blog.create(
 //     {
 //         title: "Welcome",
-//         image: "http://http://www.desicomments.com/wp-content/uploads/Welcome-Simple-Greeting-Image-P8820dc07-600x497.jpg",
+//         image: "http://www.desicomments.com/wp-content/uploads/Welcome-Simple-Greeting-Image-P8820dc07-600x497.jpg",
 //         date: "15/02/2017",
 //         content: "Welcome to my blog"
 //     }, function (err, blog){

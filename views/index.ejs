@@ -3,6 +3,8 @@
 <div class="row text-center" style-"display:flex; flex-wrap:wrap">
         <% blogs.forEach(function(blog){ %>
                          <h4> <li style="list-style:none;"><%= blog.title %></li></h4>
+                         <h5> <li style="list-style:none;"><%= blog.date %></li></h5>
+                         <img  style="width: 25%;" src="<%= blog.image %>" alt="">
         <% }); %>
     </div>
 
