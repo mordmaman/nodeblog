@@ -36,8 +36,8 @@ app.get("/", function(req, res){
     res.render("index");
 })
 
-app.get("blogs/new", function(req, res){
-    res.render("new.ejs");
+app.get("/blogs/new", function(req, res){
+    res.render("new");
 })
 
 //server 
