@@ -37,6 +37,7 @@ app.get("/blogs", function(req, res){
         if(err){
             console.log(err);
         } else {
+            console.log(allBlogs[0].content.substring(0,3));
             res.render("index", {blogs: allBlogs});
         }
     })
@@ -47,8 +48,10 @@ app.post('/blogs', function (req, res){
     var title = req.body.title;
     var date = req.body.date;
     var image = req.body.image;
-    var blog = req.body.blog;
-    var newBlog = {title: title, date: date, image: image, content: blog}
+    var content = req.body.content;
+    
+    console.log(req.body);
+    var newBlog = {title: title, date: date, image: image, content: content}
     //create blog and add to mongodb
     Blog.create(newBlog, function(err, newlyCreated){
         if(err){
