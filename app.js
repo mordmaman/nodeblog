@@ -42,6 +42,23 @@ app.get("/blogs", function(req, res){
     })
 })
 
+app.post('/blogs', function (req, res){
+    //get data from form and add to blogs
+    var title = req.body.title;
+    var date = req.body.date;
+    var image = req.body.image;
+    var blog = req.body.blog;
+    var newBlog = {title: title, date: date, image: image, content: blog}
+    //create blog and add to mongodb
+    Blog.create(newBlog, function(err, newlyCreated){
+        if(err){
+            console.log(err);
+        } else {
+            res.redirect("/blogs");
+        }
+    })
+})
+
 app.get("/", function(req, res){
     res.redirect("/blogs");
 })
