@@ -13,8 +13,7 @@
             <div class="col-sm-8">
                 <h4> <li style="list-style:none;"><%= blog.title %></li></h4>
                 <h5> <li style="list-style:none;"><%= blog.date %></li></h5>
-                <p><%= 'hi mord'.substring(0, 2) %></p>
-                <p><%= typeof blog.content %></p>
+                <p><%= blog.content.substring(0, 10) %></p>
             </div>     
         </div>             
     <% }); %>
