@@ -1,12 +1,21 @@
 <% include partials/header %>
-<h1>home page</h1>
+<div class="row text-center">
+    <h1>Node Blog</h1>
+</div>
 
-<div class="row text-center" style-"display:flex; flex-wrap:wrap">
+
+<div class="row" style-"display:flex; flex-wrap:wrap">
         <% blogs.forEach(function(blog){ %>
-                         <h4> <li style="list-style:none;"><%= blog.title %></li></h4>
-                         <h5> <li style="list-style:none;"><%= blog.date %></li></h5>
-                         <img  style="width: 150px;" src="<%= blog.image %>" alt="">
-                         <p><%= blog.content %></p>
+        <div class="row">
+            <div class="col-sm-4">
+                <img  style="width: 150px;" src="<%= blog.image %>" alt="">
+            </div>
+            <div class="col-sm-8">
+                <h4> <li style="list-style:none;"><%= blog.title %></li></h4>
+                <h5> <li style="list-style:none;"><%= blog.date %></li></h5>
+                <p><%= blog.content %></p>
+            </div>     
+        </div>             
         <% }); %>
     </div>
 
