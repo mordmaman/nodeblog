@@ -32,7 +32,7 @@ var Blog = mongoose.model("Blog", blogSchema);
 //     }
 // )
 
-app.get("/", function(req, res){
+app.get("/blogs", function(req, res){
     Blog.find({}, function(err, allBlogs){
         if(err){
             console.log(err);
@@ -42,8 +42,8 @@ app.get("/", function(req, res){
     })
 })
 
-app.get("/blogs/", function(req, res){
-    res.redirect("/");
+app.get("/", function(req, res){
+    res.redirect("/blogs");
 })
 
 app.get("/blogs/new", function(req, res){
