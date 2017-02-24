@@ -37,7 +37,7 @@ app.get("/blogs", function(req, res){
         if(err){
             console.log(err);
         } else {
-            console.log(allBlogs[0].content.substring(0,3));
+            //console.log(allBlogs[0].content.substring(0,3));
             res.render("index", {blogs: allBlogs});
         }
     })
