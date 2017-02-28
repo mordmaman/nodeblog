@@ -3,19 +3,19 @@
 
 <form action="/blogs" method="POST">
         <div class="form-group">
-            <input class="form-control" type="text" name="blog[title]" placeholder="title">
+            <input class="form-control" type="text" name="blog[title]" value="<%= blog.title %>">
         </div>
         <div class="form-group">
-            <input class="form-control" type="text" name="blog[date]" placeholder="date">
+            <input class="form-control" type="text" name="blog[date]" value="<%= blog.date %>">
         </div>
         <div class="form-group">
-            <input class="form-control" type="text" name="blog[image]" placeholder="image url">
+            <input class="form-control" type="text" name="blog[image]" value="<%= blog.image %>">
+        </div>
+        <div>
+            <label>Blog Content</label>
         </div>
         <div class="form-group">
-            <input class="form-control" type="text" name="blog[body]" placeholder="blog">
-        </div>
-        <div class="form-group">
-            <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+            <textarea name="blog[body]" id="" cols="30" rows="10"><%= blog.body %></textarea>
         </div>
 </form>
 
