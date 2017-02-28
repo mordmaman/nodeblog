@@ -16,6 +16,7 @@
                 <h4> <li style="list-style:none;"><%= blog.title %></li></h4>
                 <h5> <li style="list-style:none;"><%= blog.date %></li></h5>
                 <p><%= blog.body.substring(0, 3) %></p>
+                <a href="/blogs/<%= blog._id %>">Read More</a>
             </div>     
         </div>             
     <% }); %>
