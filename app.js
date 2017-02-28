@@ -74,9 +74,9 @@ app.get("/blogs/:id/edit", function(req, res){
         if(err){
             res.redirect("/blogs");
         } else {
-            res.render("edit", {blog: foundBlog});
+            res.render("edit", {blog: chosenBlog});
         }
-    })
+    });
 })
 
 
