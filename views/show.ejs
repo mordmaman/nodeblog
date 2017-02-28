@@ -1,0 +1,16 @@
+<% include partials/header %>
+<h1><%= blog.title %></h1>
+
+<div class="row" style-"display:flex; flex-wrap:wrap;">
+        <div class="row center-block" style="margin-top: 20px; width: 75%; height: 150px; padding: 10px; border: 1px solid black;">
+            <div class="col-sm-4">
+                <img  style="width: 150px;" src="<%= blog.image %>" alt="">
+            </div>
+            <div class="col-sm-8">
+                <h4> <li style="list-style:none;"><%= blog.title %></li></h4>
+                <h5> <li style="list-style:none;"><%= blog.date %></li></h5>
+                <p><%= blog.body %></p>
+            </div>     
+        </div>             
+</div>
+<% include partials/footer %>
