@@ -55,6 +55,11 @@ app.post('/blogs', function (req, res){
     })
 })
 
+//show route
+
+app.get("/blogs/:id", function (req, res){
+    res.send("show page");
+});
 app.get("/", function(req, res){
     res.redirect("/blogs");
 })
