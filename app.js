@@ -70,7 +70,13 @@ app.get("/blogs/:id", function (req, res){
 //edit route
 
 app.get("/blogs/:id/edit", function(req, res){
-    res.render("edit");
+    Blog.findById(req.params.id, function(err, chosenBlog){
+        if(err){
+            res.redirect("/blogs");
+        } else {
+            res.render("edit", {blog: foundBlog});
+        }
+    })
 })
 
 
