@@ -67,6 +67,12 @@ app.get("/blogs/:id", function (req, res){
     });
 });
 
+//edit route
+
+app.get("/blogs/:id/edit", function(req, res){
+    res.render("edit");
+})
+
 
 app.get("/", function(req, res){
     res.redirect("/blogs");
