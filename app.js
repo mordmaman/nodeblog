@@ -79,6 +79,11 @@ app.get("/blogs/:id/edit", function(req, res){
     });
 })
 
+//update route
+app.put("/blogs/:id", function(req, res){
+    res.send("update route")
+})
+
 
 app.get("/", function(req, res){
     res.redirect("/blogs");
