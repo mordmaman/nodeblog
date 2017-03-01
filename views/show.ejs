@@ -11,6 +11,7 @@
                 <h5> <li style="list-style:none;"><%= blog.date %></li></h5>
                 <p><%- blog.body %></p>
             </div>  
+            <a href="/blogs/<%= blog._id%>/edit">Edit</a>
             <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
                 <button>Delete</button>
             </form>   
